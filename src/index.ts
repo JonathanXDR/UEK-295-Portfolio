@@ -1,15 +1,16 @@
-import express from 'express';
-
 import express, { NextFunction, Request, Response } from 'express';
 import session from 'express-session';
 import taskRouter from './routes/tasks';
 import authRouter from './routes/auth';
+import swaggerFile from './swagger/swagger-output.json';
+import swaggerUi from 'swagger-ui-express';
 import { checkAuth } from './middleware/auth.middleware';
 
 const app = express();
 const port = 3000;
 
 app.use(express.json());
+app.use('/swagger', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use(
   session({
     secret: 'supersecret',
