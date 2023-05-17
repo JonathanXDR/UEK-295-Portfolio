@@ -4,7 +4,7 @@ const router = Router();
 declare module 'express-session' {
   interface SessionData {
     authenticated?: boolean;
-    email?: string;
+    email?: string | null;
   }
 }
 
@@ -29,6 +29,12 @@ router.get('/verify', (req: Request, res: Response) => {
   } else {
     res.status(401).send({ message: 'Token is invalid' });
   }
+});
+
+router.delete('/logout', (req: Request, res: Response) => {
+  req.session.authenticated = false;
+  req.session.email = null;
+  res.sendStatus(204);
 });
 
 export default router;
