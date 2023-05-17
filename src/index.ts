@@ -4,7 +4,7 @@ import taskRouter from './routes/tasks';
 import authRouter from './routes/auth';
 import swaggerFile from './swagger/swagger-output.json';
 import swaggerUi from 'swagger-ui-express';
-import { checkAuth } from './middleware/auth.middleware';
+import { checkAuth } from './middleware/auth';
 
 const app = express();
 const port = 3000;
