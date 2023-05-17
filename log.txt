@@ -1,0 +1,259 @@
+commit 9a2ca25be7a2db107c07057c71a9b5c2a6495eee
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 16:20:57 2023 +0200
+
+    feat(postman): add export of postman collection
+
+commit 529dcdc8e72fefcf73b5b26f398fd8905fb04309
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 16:17:52 2023 +0200
+
+    docs(README.md): add author
+
+commit d3636d4ffd34af4cfed67454b5678dc09637a93e
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 16:15:53 2023 +0200
+
+    chore(cleanup): rename middleware auth
+
+commit 20f1851c25ff59b15d8c1fc397dd7c136937691f
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 16:11:46 2023 +0200
+
+    docs(README.md): add default IDE docs
+
+commit 9b811103009279c09a3554495b36a05de2152a91
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 16:02:16 2023 +0200
+
+    chore(tasks.ts): update status codes for when title is not defined
+
+commit 44223b346bb36955a945dba202a4960fa3846885
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 16:00:51 2023 +0200
+
+    fix(swagger): fix swagger.ts file & generate swagger-output.json
+
+commit 7a55c6d7ae9344539f69e8b5e81cbfa3c13d45b3
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 15:59:53 2023 +0200
+
+    feat(swagger): add swagger to index.ts
+
+commit ebdb06d938b4d27c4b63666820fde9450ec4497b
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 15:59:17 2023 +0200
+
+    docs(repo, swagger): add remote repo & swagger docs link
+
+commit 44d3fe85351ccfad2af626f3afe84389dda14891
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 15:37:27 2023 +0200
+
+    feat(errorhandling): add errorhandling to index.ts
+
+commit 3bc3433e69bdbd5274e2bd7f9a7c2439793b0172
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 15:36:39 2023 +0200
+
+    chore(swagger): update imports of swagger.ts
+
+commit 65a887181899da6dd82357786a1a8db6028b9be6
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 15:33:14 2023 +0200
+
+    fix(auth.middleware.ts): fix header error by adding return statement
+
+commit cca01037ea5ba82bb43471275e448f3a555abe0d
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 14:32:14 2023 +0200
+
+    chore(eslint, swagger): update eslint target dir & swagger file paths
+
+commit f68e2994bfed2918793081352e869d8e9fe39287
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 14:19:19 2023 +0200
+
+    Revert "fix(ERR_HTTP_HEADERS_SENT): fix http header error"
+    
+    This reverts commit 3529d549f454374428704d23658d0cbf0311c0b0.
+
+commit ed39991552a27d8cef9026d795566af141edf6f6
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 14:20:12 2023 +0200
+
+    fix(middleware): update use of middleware to work only for /tasks
+
+commit 3529d549f454374428704d23658d0cbf0311c0b0
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 14:19:19 2023 +0200
+
+    fix(ERR_HTTP_HEADERS_SENT): fix http header error
+
+commit 4b70efe9e9eca834b9fb6ca99934c466e57d3e9c
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 13:49:16 2023 +0200
+
+    chore(cleanup auth.middleware.ts): remove else statement
+
+commit 4d3de3ed004f480d0cb1eec2304e43ed36388c5e
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 13:47:55 2023 +0200
+
+    chore(cleanup auth.ts): remove else statements
+
+commit adf9749dac0f3d09fb9dc35a2338bedff30c6426
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 13:45:46 2023 +0200
+
+    chore(cleanup): remove redundant /tasks route in tasks.ts
+
+commit 151970a2f43b3bca203470754e9fe48f0991d448
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 13:34:29 2023 +0200
+
+    feat(middleware): add auth middleware
+
+commit 779412e78061ca2e6aa8c282915626d298bea9d7
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 13:18:05 2023 +0200
+
+    feat(delete /logout): add logout route to authentication
+
+commit 9b09e98d35b3c1efbad11ec467511de9600cb835
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 13:15:15 2023 +0200
+
+    feat(get /verify): add verify route to authentication
+
+commit 5d080641763e2ae1664c1c475a8548b65ae74bd3
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 13:11:28 2023 +0200
+
+    feat(post /login): add login route
+
+commit bcb9fbc322a91252e95615fe4558c7a9418bc3d6
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 13:02:09 2023 +0200
+
+    chore(cleanup tasks.ts): remove redundant information & else statements
+
+commit 98e60ba860a7fbfe86611acf912f2803adf09c8b
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 11:41:41 2023 +0200
+
+    chore(cleanup): remove unnecessary ignore prop in nodemonConfig
+
+commit 80ec48acf947e03fad4ccabf33da61206c9d8dd0
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 11:39:15 2023 +0200
+
+    feat(swagger): add swagger.js file
+
+commit a498b80edc07317e33eb925dc37eb038aa7d7989
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 11:29:05 2023 +0200
+
+    feat(User): add User DTO & add relation to Task
+
+commit 6909877784ef9147eabf5cfc0381148284167ba3
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 11:09:21 2023 +0200
+
+    fix(routes): fix not found routes in index.ts
+
+commit 4631f6c53f66cd3a5c61bfe426873ba8c094a789
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 10:57:28 2023 +0200
+
+    fix(nodemon): fix nodemon config in package.json
+
+commit 5f89d0e853d1cc01eec4ac579015e7ac5243895b
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 10:45:10 2023 +0200
+
+    chore(eslint, typescript): update config files of eslint & typescript
+
+commit 0447293d643d1ca3e622a7f1075b6cffd163c335
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 10:24:35 2023 +0200
+
+    chore(cleanup): update folder structure & add missing dependencies
+
+commit 64e5f1892cec636f5907771f9cf66abecbfd3853
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:46:25 2023 +0200
+
+    feat(delete /tasks/:id): add delete endpoint for id to /tasks
+
+commit 3422c99c441c0bd0e3f39e5e7791f86675244c9d
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:44:30 2023 +0200
+
+    chore(cleanup): move all consts foreach endpoint together
+
+commit d476423baca43d811115d7cbb003c90b250506ee
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:41:02 2023 +0200
+
+    feat(put /tasks/:id): add put endpoint for id to /tasks
+
+commit 581eaf28408c2dc056bff3a5a33c71a395308484
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:36:10 2023 +0200
+
+    feat(get /tasks/:id): add get endpoint for id to /tasks
+
+commit aa60a08ff9bd255e479fec845315be4bbeb9abff
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:34:21 2023 +0200
+
+    feat(post /tasks): add post endpoint to /tasks
+
+commit b61aab25ab843841276046a5969ebc3330af9193
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:29:00 2023 +0200
+
+    feat(/tasks route): setup index.ts & add /tasks route
+
+commit 4edc3f1b0ac54e2816049be7027c75025cb7f669
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:15:33 2023 +0200
+
+    feat(gitignore): update gitignore file for every OS
+
+commit cc54c4de635458f20b54a5dbf4fe64d2dc7dd26e
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:14:20 2023 +0200
+
+    feat(tsconfig): add tsconfig.json file
+
+commit dde6531e2aee974f1f27f65bb34f172dde8bea00
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:12:18 2023 +0200
+
+    feat(prettierrc): add prettierrc file
+
+commit be59973ae5a3284674e17ff1b0f118a9beebd8ab
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:11:40 2023 +0200
+
+    feat(eslint): setup eslint
+
+commit 9d228d80fa1c572e49a86a90f2087000debe1f50
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:09:11 2023 +0200
+
+    feat(dependencies): add dependencies to package.json
+
+commit a1f442900964b3a1b1890ab76a12ed310e10e7a6
+Author: Jonathan Russ <jonathan.russ@edu.tbz.ch>
+Date:   Wed May 17 09:06:52 2023 +0200
+
+    feat(package.json): setup project using npm init
+
+commit c47127789de76e8f729459dbba5b7af049b912d0
+Author: Jonathan Russ <73559516+JonathanXDR@users.noreply.github.com>
+Date:   Tue May 9 09:03:58 2023 +0200
+
+    Initial commit
