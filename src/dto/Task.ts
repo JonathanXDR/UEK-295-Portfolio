@@ -1,7 +1,9 @@
+import { User } from './User';
+
 export interface Task {
   id: number;
   title: string;
   creationDate: Date;
   completionDate: Date | null;
-  userId: number;
+  userId: User['id'];
 }

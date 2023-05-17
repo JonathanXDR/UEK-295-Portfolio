@@ -10,6 +10,20 @@ const tasks = [
     completionDate: null,
     userId: 1,
   },
+  {
+    id: 2,
+    title: 'Buy Milk',
+    creationDate: new Date(),
+    completionDate: null,
+    userId: 1,
+  },
+  {
+    id: 3,
+    title: 'Buy Eggs',
+    creationDate: new Date(),
+    completionDate: null,
+    userId: 1,
+  },
 ] as Task[];
 
 router.get('/tasks', (req: Request, res: Response) => {
@@ -30,7 +44,7 @@ router.post('/tasks', (req: Request, res: Response) => {
     tasks.push(task);
     res.status(201).send(task);
   } else {
-    res.sendStatus(422);
+    res.sendStatus(204);
   }
 });
 
@@ -50,7 +64,7 @@ router.put('/tasks/:id', (req: Request, res: Response) => {
   const title = req.body.title;
   const index = tasks.findIndex((task) => task.id === id);
   const task = {
-    id: tasks.length + 1,
+    id: id,
     title: title,
     creationDate: new Date(),
     completionDate: null,
@@ -65,7 +79,7 @@ router.put('/tasks/:id', (req: Request, res: Response) => {
       res.sendStatus(404);
     }
   } else {
-    res.sendStatus(422);
+    res.sendStatus(204);
   }
 });
 
