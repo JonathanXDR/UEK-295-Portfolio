@@ -1,8 +1,8 @@
 import { Request, Response, Router } from 'express';
 import { Task } from '../dto/Task';
-const router = Router();
 
-const tasks = [
+const router = Router();
+const tasks: Task[] = [
   {
     id: 1,
     title: 'Buy Toast',
@@ -24,76 +24,68 @@ const tasks = [
     completionDate: null,
     userId: 1,
   },
-] as Task[];
+];
 
-router.get('/tasks', (req: Request, res: Response) => {
+router.get('/tasks', (_req: Request, res: Response) => {
   res.status(200).send(tasks);
 });
 
 router.post('/tasks', (req: Request, res: Response) => {
   const title = req.body.title;
-  const task = {
+  if (!title) {
+    return res.sendStatus(400);
+  }
+
+  const task: Task = {
     id: tasks.length + 1,
-    title: title,
+    title,
     creationDate: new Date(),
     completionDate: null,
     userId: 1,
-  } as Task;
+  };
 
-  if (title) {
-    tasks.push(task);
-    res.status(201).send(task);
-  } else {
-    res.sendStatus(204);
-  }
+  tasks.push(task);
+  res.status(201).send(task);
 });
 
 router.get('/tasks/:id', (req: Request, res: Response) => {
-  const id = parseInt(req.params.id);
-  const task = tasks.find((task) => task.id === id) as Task;
+  const task = tasks.find((task) => task.id === Number(req.params.id));
 
-  if (task) {
-    res.status(200).send(task);
-  } else {
-    res.sendStatus(404);
+  if (!task) {
+    return res.sendStatus(404);
   }
+
+  res.status(200).send(task);
 });
 
 router.put('/tasks/:id', (req: Request, res: Response) => {
-  const id = parseInt(req.params.id);
+  const id = Number(req.params.id);
   const title = req.body.title;
-  const index = tasks.findIndex((task) => task.id === id);
-  const task = {
-    id: id,
-    title: title,
-    creationDate: new Date(),
-    completionDate: null,
-    userId: 1,
-  } as Task;
 
-  if (title) {
-    if (index >= 0) {
-      tasks[index] = task;
-      res.status(200).send(task);
-    } else {
-      res.sendStatus(404);
-    }
-  } else {
-    res.sendStatus(204);
+  if (!title) {
+    return res.sendStatus(400);
   }
+
+  const task = tasks.find((task) => task.id === id);
+
+  if (!task) {
+    return res.sendStatus(404);
+  }
+
+  task.title = title;
+  res.status(200).send(task);
 });
 
 router.delete('/tasks/:id', (req: Request, res: Response) => {
-  const id = parseInt(req.params.id);
+  const id = Number(req.params.id);
   const index = tasks.findIndex((task) => task.id === id);
-  const task = tasks.find((task) => task.id === id) as Task;
 
-  if (index >= 0) {
-    tasks.splice(index, 1);
-    res.status(200).send(task);
-  } else {
-    res.sendStatus(404);
+  if (index < 0) {
+    return res.sendStatus(404);
   }
+
+  const [removedTask] = tasks.splice(index, 1);
+  res.status(200).send(removedTask);
 });
 
 export default router;
