@@ -13,7 +13,26 @@ const tasks = [
 ] as Task[];
 
 router.get('/tasks', (req: Request, res: Response) => {
-  res.send(tasks);
+  res.status(200).send(tasks);
+});
+
+router.post('/tasks', (req: Request, res: Response) => {
+  const title = req.body.title;
+
+  if (title) {
+    const task = {
+      id: tasks.length + 1,
+      title: title,
+      creationDate: new Date(),
+      completionDate: null,
+      userId: 1,
+    } as Task;
+
+    tasks.push(task);
+    res.status(201).send(task);
+  } else {
+    res.sendStatus(422);
+  }
 });
 
 export default router;
