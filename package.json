@@ -10,11 +10,6 @@
     "lint": "eslint ."
   },
   "nodemonConfig": {
-    "ignore": [
-      ".git",
-      "node_modules",
-      "dist"
-    ],
     "watch": [
       "src"
     ],
