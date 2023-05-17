@@ -2,7 +2,7 @@ import session from 'express-session';
 import express from 'express';
 import swaggerUi from 'swagger-ui-express';
 
-const taskRouter = require('./routes/taskRoutes');
+const taskRouter = require('./routes/tasks.ts');
 
 const app = express();
 const port = 3000;

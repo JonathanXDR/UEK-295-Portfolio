@@ -5,7 +5,7 @@ const router = Router();
 const tasks = [
   {
     id: 1,
-    title: 'Buy Toaster',
+    title: 'Buy Toast',
     creationDate: new Date(),
     completionDate: null,
     userId: 1,
