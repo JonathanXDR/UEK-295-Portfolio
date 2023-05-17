@@ -1,10 +1,14 @@
 # UEK-295-Portfolio
 
-## Remote Repository Link:
+## Author
+
+This project is developed by Jonathan Russ.
+
+## GitHub Repository
 
 https://github.com/JonathanXDR/UEK-295-Portfolio
 
-## Swagger Documentation Link:
+## Local Swagger Documentation
 
 http://localhost:3000/swagger
 
@@ -15,8 +19,9 @@ Visual Studio Code is a code editor redefined and optimized for building and deb
 ## Table of Contents
 
 - [UEK-295-Portfolio](#uek-295-portfolio)
-  - [Remote Repository Link:](#remote-repository-link)
-  - [Swagger Documentation Link:](#swagger-documentation-link)
+  - [Author](#author)
+  - [GitHub Repository](#github-repository)
+  - [Local Swagger Documentation](#local-swagger-documentation)
 - [Visual Studio Code](#visual-studio-code)
   - [Table of Contents](#table-of-contents)
   - [Setup](#setup)
