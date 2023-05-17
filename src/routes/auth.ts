@@ -21,4 +21,14 @@ router.post('/login', (req: Request, res: Response) => {
   }
 });
 
+router.get('/verify', (req: Request, res: Response) => {
+  if (req.session.authenticated) {
+    res
+      .status(200)
+      .send({ message: 'Token is valid', email: req.session.email });
+  } else {
+    res.status(401).send({ message: 'Token is invalid' });
+  }
+});
+
 export default router;
