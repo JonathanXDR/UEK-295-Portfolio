@@ -69,4 +69,17 @@ router.put('/tasks/:id', (req: Request, res: Response) => {
   }
 });
 
+router.delete('/tasks/:id', (req: Request, res: Response) => {
+  const id = parseInt(req.params.id);
+  const index = tasks.findIndex((task) => task.id === id);
+  const task = tasks.find((task) => task.id === id) as Task;
+
+  if (index >= 0) {
+    tasks.splice(index, 1);
+    res.status(200).send(task);
+  } else {
+    res.sendStatus(404);
+  }
+});
+
 export default router;
