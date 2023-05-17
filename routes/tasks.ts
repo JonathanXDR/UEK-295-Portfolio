@@ -18,16 +18,15 @@ router.get('/tasks', (req: Request, res: Response) => {
 
 router.post('/tasks', (req: Request, res: Response) => {
   const title = req.body.title;
+  const task = {
+    id: tasks.length + 1,
+    title: title,
+    creationDate: new Date(),
+    completionDate: null,
+    userId: 1,
+  } as Task;
 
   if (title) {
-    const task = {
-      id: tasks.length + 1,
-      title: title,
-      creationDate: new Date(),
-      completionDate: null,
-      userId: 1,
-    } as Task;
-
     tasks.push(task);
     res.status(201).send(task);
   } else {
@@ -49,17 +48,16 @@ router.get('/tasks/:id', (req: Request, res: Response) => {
 router.put('/tasks/:id', (req: Request, res: Response) => {
   const id = parseInt(req.params.id);
   const title = req.body.title;
+  const index = tasks.findIndex((task) => task.id === id);
+  const task = {
+    id: tasks.length + 1,
+    title: title,
+    creationDate: new Date(),
+    completionDate: null,
+    userId: 1,
+  } as Task;
 
   if (title) {
-    const task = {
-      id: tasks.length + 1,
-      title: title,
-      creationDate: new Date(),
-      completionDate: null,
-      userId: 1,
-    } as Task;
-
-    const index = tasks.findIndex((task) => task.id === id);
     if (index >= 0) {
       tasks[index] = task;
       res.status(200).send(task);
