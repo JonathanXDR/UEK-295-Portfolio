@@ -1,4 +1,5 @@
 import swaggerAutogen from 'swagger-autogen';
+import swaggerFile from '../../dist/index.js';
 
 const doc = {
   info: {
@@ -19,8 +20,6 @@ const doc = {
 };
 
 const outputFile = './swagger-output.json';
-const endpointsFiles = ['../../dist/index.js'];
+const endpointsFiles = [swaggerFile];
 
-swaggerAutogen()(outputFile, endpointsFiles, doc).then(async () => {
-  await import('../../dist/index.js');
-});
+swaggerAutogen()(outputFile, endpointsFiles, doc);
