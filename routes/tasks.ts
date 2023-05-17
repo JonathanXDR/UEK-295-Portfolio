@@ -35,4 +35,15 @@ router.post('/tasks', (req: Request, res: Response) => {
   }
 });
 
+router.get('/tasks/:id', (req: Request, res: Response) => {
+  const id = parseInt(req.params.id);
+  const task = tasks.find((task) => task.id === id) as Task;
+
+  if (task) {
+    res.status(200).send(task);
+  } else {
+    res.sendStatus(404);
+  }
+});
+
 export default router;
