@@ -46,4 +46,29 @@ router.get('/tasks/:id', (req: Request, res: Response) => {
   }
 });
 
+router.put('/tasks/:id', (req: Request, res: Response) => {
+  const id = parseInt(req.params.id);
+  const title = req.body.title;
+
+  if (title) {
+    const task = {
+      id: tasks.length + 1,
+      title: title,
+      creationDate: new Date(),
+      completionDate: null,
+      userId: 1,
+    } as Task;
+
+    const index = tasks.findIndex((task) => task.id === id);
+    if (index >= 0) {
+      tasks[index] = task;
+      res.status(200).send(task);
+    } else {
+      res.sendStatus(404);
+    }
+  } else {
+    res.sendStatus(422);
+  }
+});
+
 export default router;
