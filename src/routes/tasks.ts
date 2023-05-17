@@ -26,11 +26,11 @@ const tasks: Task[] = [
   },
 ];
 
-router.get('/tasks', (_req: Request, res: Response) => {
+router.get('/', (_req: Request, res: Response) => {
   res.status(200).send(tasks);
 });
 
-router.post('/tasks', (req: Request, res: Response) => {
+router.post('/', (req: Request, res: Response) => {
   const title = req.body.title;
   if (!title) {
     return res.sendStatus(400);
@@ -48,7 +48,7 @@ router.post('/tasks', (req: Request, res: Response) => {
   res.status(201).send(task);
 });
 
-router.get('/tasks/:id', (req: Request, res: Response) => {
+router.get('/:id', (req: Request, res: Response) => {
   const task = tasks.find((task) => task.id === Number(req.params.id));
 
   if (!task) {
@@ -58,7 +58,7 @@ router.get('/tasks/:id', (req: Request, res: Response) => {
   res.status(200).send(task);
 });
 
-router.put('/tasks/:id', (req: Request, res: Response) => {
+router.put('/:id', (req: Request, res: Response) => {
   const id = Number(req.params.id);
   const title = req.body.title;
 
@@ -76,7 +76,7 @@ router.put('/tasks/:id', (req: Request, res: Response) => {
   res.status(200).send(task);
 });
 
-router.delete('/tasks/:id', (req: Request, res: Response) => {
+router.delete('/:id', (req: Request, res: Response) => {
   const id = Number(req.params.id);
   const index = tasks.findIndex((task) => task.id === id);
 
