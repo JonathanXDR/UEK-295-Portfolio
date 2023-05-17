@@ -16,9 +16,9 @@ app.use(
     cookie: {},
   })
 );
-app.use(checkAuth);
+
 app.use('/auth', authRouter);
-app.use('/tasks', taskRouter);
+app.use('/tasks', checkAuth, taskRouter);
 
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
