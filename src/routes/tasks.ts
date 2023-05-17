@@ -33,7 +33,7 @@ router.get('/', (_req: Request, res: Response) => {
 router.post('/', (req: Request, res: Response) => {
   const title = req.body.title;
   if (!title) {
-    return res.sendStatus(400);
+    return res.sendStatus(406);
   }
 
   const task: Task = {
@@ -41,6 +41,7 @@ router.post('/', (req: Request, res: Response) => {
     title,
     creationDate: new Date(),
     completionDate: null,
+    // TODO: Get the user ID from the session and use it here instead of 1
     userId: 1,
   };
 
@@ -63,7 +64,7 @@ router.put('/:id', (req: Request, res: Response) => {
   const title = req.body.title;
 
   if (!title) {
-    return res.sendStatus(400);
+    return res.sendStatus(406);
   }
 
   const task = tasks.find((task) => task.id === id);
