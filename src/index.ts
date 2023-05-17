@@ -2,6 +2,7 @@ import express from 'express';
 import session from 'express-session';
 import taskRouter from './routes/tasks';
 import authRouter from './routes/auth';
+import { checkAuth } from './middleware/auth.middleware';
 
 const app = express();
 const port = 3000;
@@ -16,6 +17,7 @@ app.use(
   })
 );
 app.use('/auth', authRouter);
+app.use(checkAuth);
 app.use(taskRouter);
 
 app.listen(port, () => {
