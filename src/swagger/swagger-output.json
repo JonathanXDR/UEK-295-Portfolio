@@ -124,7 +124,7 @@
         }
       }
     },
-    "/login": {
+    "/auth/login": {
       "post": {
         "description": "",
         "parameters": [
@@ -154,7 +154,7 @@
         }
       }
     },
-    "/verify": {
+    "/auth/verify": {
       "get": {
         "description": "",
         "parameters": [],
@@ -168,7 +168,7 @@
         }
       }
     },
-    "/logout": {
+    "/auth/logout": {
       "delete": {
         "description": "",
         "parameters": [],
